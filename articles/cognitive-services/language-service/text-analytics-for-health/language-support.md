@@ -8,7 +8,7 @@ manager: nitinme
 ms.service: cognitive-services
 ms.subservice: language-service
 ms.topic: conceptual
-ms.date: 01/04/2023
+ms.date: 05/23/2023
 ms.author: jboback
 ms.custom: language-service-health, ignite-fall-2021
 ---
@@ -19,7 +19,7 @@ Use this article to learn which natural languages are supported by Text Analytic
 
 ## Hosted API Service
 
-The hosted API service supports English language, model version 03-01-2022. Additional languages, English, Spanish, French, German Italian, Portuguese and Hebrew are supported with model version 2022-08-15-preview.
+Text analytics for health supports six languages in the hosted API: English, Spanish, French, German, Italian and Portuguese. Currently, only english is supported in GA models. The additional languages are supported in preview, for example using model version: 2023-04-15-preview.
 
 When structuring the API request, the relevant language tags must be added for these languages: 
 
@@ -51,7 +51,7 @@ json
             "kind": "Healthcare",
             "parameters":
             {
-            "modelVersion": "2022-08-15-preview"
+            "modelVersion": " 2023-04-15-preview"
             }
         }
     ]
@@ -60,11 +60,17 @@ json
 
 ## Docker container
 
-The docker container supports English language, model version 2022-03-01. 
-Additional languages are also supported when using a docker container to deploy the API: Spanish, French, German Italian, Portuguese and Hebrew. This functionality is currently in preview, model version 2022-08-15-preview.
+The docker container is available in all languages supported by the API, as well as Hebrew.
+
 Full details for deploying the service in a container can be found [here](../text-analytics-for-health/how-to/use-containers.md).
 
 In order to download the new container images from the Microsoft public container registry, use the following [docker pull](https://docs.docker.com/engine/reference/commandline/pull/) command.
+
+For English only (GA):
+
+```
+docker pull mcr.microsoft.com/azure-cognitive-services/textanalytics/healthcare:latest
+```
 
 For English, Spanish, Italian, French, German and Portuguese:
 
@@ -114,16 +120,6 @@ json
     ]
 }
 ```
-## Details of the supported model versions for each language:
-
-
-| Language Code       | Model Version: |  Featured Tag | Specific Tag |
-|:--------------------|:-------------:|:-------------------:|:------------------:|
-| `en`                  |  2022-03-01   |      latest         |   3.0.59413252-onprem-amd64    | 
-| `en`, `es`, `it`, `fr`, `de`, `pt`   |  2022-08-15-preview  |      latin         |   3.0.60903415-latin-onprem-amd64    | 
-| `he`                  |  2022-08-15-preview   |      semitic         |   3.0.60903415-semitic-onprem-amd64   | 
-
-
 
 
 
