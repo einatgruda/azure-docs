@@ -8,7 +8,7 @@ manager: nitinme
 ms.service: cognitive-services
 ms.subservice: language-service
 ms.topic: how-to
-ms.date: 01/04/2023
+ms.date: 05/23/2023
 ms.author: jboback
 ms.custom: language-service-health, ignite-fall-2021
 ---
@@ -24,13 +24,15 @@ Text Analytics for health can be used to extract and label relevant medical info
 
 There are two ways to call the service: 
 
-* A [Docker container](use-containers.md) (synchronous)
-* Using the web-based API and client libraries (asynchronous) 
+* A [Docker container](use-containers.md) (asynchronous & synchronous)
+* Using the web-based API (asynchronous only) 
 
 ## Development options
 
 [!INCLUDE [Development options](../includes/development-options.md)] 
 
+
+##
 
 
 ## Specify the Text Analytics for health model
